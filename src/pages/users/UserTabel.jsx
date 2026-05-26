@@ -33,7 +33,7 @@ const users = data?.data || []
 
 
   return (
-    <div className="bg-card p-6 rounded-xl shadow space-y-4">
+    <div className="bg-background p-2 md:p-6 rounded-xl shadow space-y-4">
       {/* Search */}
       <SearchBtn />
 

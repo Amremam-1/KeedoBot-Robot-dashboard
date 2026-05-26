@@ -7,6 +7,7 @@ import LoginPage from "../pages/Auth/LoginPage"
 import RegisterPage from "../pages/Auth/RegisterPage"
 import ProtectedRoute from "./ProtectedRoute"
 import ForgetPasswordPage from "../pages/Auth/ForgetPasswordPage"
+import Robots from "../pages/robots/Robots"
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> }, // dashboard main page
       { path: "users", element: <UsersTable /> }, // data table
+      { path: "all-robots", element: <Robots /> },
     ],
   },
 ])

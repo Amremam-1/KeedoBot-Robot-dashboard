@@ -3,7 +3,7 @@ import Charts from "../../components/Charts"
 
 const Home = () => {
   return (
-    <div className="p-6 space-y-8 bg-background min-h-screen">
+    <div className="md:p-6 P-2 space-y-8 bg-background min-h-screen rounded-xl shadow">
       {/* Title */}
       <div>
         <h1 className="text-2xl font-bold text-textPrimary">

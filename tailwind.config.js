@@ -7,36 +7,35 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
-  colors: {
-  primary: "#F3801B",
-  primaryHover: "#EA6E00",
+      colors: {
+        primary: "#F3801B",
+        primaryHover: "#EA6E00",
 
-  
-  secondary: "#38BDF8",
-  accent: "#22C55E",
+        secondary: "#38BDF8",
+        accent: "#22C55E",
 
-  background: "#FFF8F1",
+        background: "#FFF8F1",
 
-  sidebar: "#FFFFFF",
+        sidebar: "#FFFFFF",
 
-  textPrimary: "#0F172A",
-  textSecondary: "#64748B",
+        textPrimary: "#0F172A",
+        textSecondary: "#64748B",
 
-  borderColor: "#FED7AA",
+        borderColor: "#FED7AA",
 
-  card: "#FFFFFF",
+        card: "#FFFFFF",
 
-  hover: "#FFF1E6",
+        hover: "#FFF1E6",
 
-  success: "#10B981",
-  warning: "#F59E0B",
-  danger: "#EF4444",
+        success: "#10B981",
+        warning: "#F59E0B",
+        danger: "#EF4444",
 
-  online: "#22C55E",
-  offline: "#94A3B8",
-},
-      
-     borderRadius: {
+        online: "#22C55E",
+        offline: "#94A3B8",
+      },
+
+      borderRadius: {
         xl: "1rem",
         "2xl": "1.5rem",
       },
@@ -48,4 +47,4 @@ export default {
   },
 
   plugins: [],
-}
+};

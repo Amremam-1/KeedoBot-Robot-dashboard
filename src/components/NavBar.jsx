@@ -1,6 +1,4 @@
-import { MdMenuOpen } from "react-icons/md"
-import { IoMdPerson } from "react-icons/io"
-import { IoMdArrowDropdown } from "react-icons/io"
+import { ChevronDown, User } from "lucide-react"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
@@ -9,6 +7,7 @@ import {
   deleteToken,
   removeItem,
 } from "../utils/storage"
+import { PanelRightOpen } from "lucide-react"
 
 const NavBar = ({ onClick }) => {
   const [openMenu, setOpenMenu] =
@@ -31,8 +30,10 @@ const NavBar = ({ onClick }) => {
       {/* left */}
 
       <div className="flex items-center">
-        <MdMenuOpen
-          size={28}
+     
+        <PanelRightOpen
+          size={23}
+          strokeWidth={2}
           className="cursor-pointer text-textPrimary hover:text-primary transition"
           onClick={onClick}
         />
@@ -48,7 +49,7 @@ const NavBar = ({ onClick }) => {
         {/* Avatar */}
 
         <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-orange-400 flex items-center justify-center shadow-md">
-          <IoMdPerson
+          <User
             size={22}
             className="text-white"
           />
@@ -72,7 +73,7 @@ const NavBar = ({ onClick }) => {
             </p>
           </div>
 
-          <IoMdArrowDropdown
+          <ChevronDown
             size={18}
             className={`text-textSecondary transition-transform duration-300 ${
               openMenu

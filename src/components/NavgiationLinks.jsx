@@ -1,5 +1,4 @@
-import { IoMdPerson } from "react-icons/io"
-import { MdOutlineInfo } from "react-icons/md"
+import { Bot, LayoutDashboard, UserCog } from "lucide-react"
 import { NavLink } from "react-router-dom"
 
 const navLinks = [
@@ -7,14 +6,20 @@ const navLinks = [
     id: 1,
     title: "Dashboard",
     path: "/dashboard",
-    icon: IoMdPerson,
+    icon: LayoutDashboard,
   },
 
   {
     id: 2,
     title: "Users",
     path: "/dashboard/users",
-    icon: MdOutlineInfo,
+    icon: UserCog,
+  },
+  {
+    id: 3,
+    title: "Robots",
+    path: "/dashboard/all-robots",
+    icon: Bot,
   },
 ]
 
