@@ -15,7 +15,7 @@ import { salesData, usersData } from "../data"
 const Charts = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-      <div className="p-6 shadow rounded-xl bg-card">
+      <div className="p-1.5 md:p-6 shadow rounded-xl bg-card">
         <h3 className="font-semibold text-textPrimary mb-4">Sales Chart</h3>
 
         <ResponsiveContainer width="100%" height={250}>
@@ -34,7 +34,7 @@ const Charts = () => {
         </ResponsiveContainer>
       </div>
 
-      <div className="p-6 shadow rounded-xl bg-card">
+      <div className="p1.5 md:p-6 shadow rounded-xl bg-card">
         <h3 className="font-semibold text-textPrimary mb-4">Users Growthrs</h3>
 
         <ResponsiveContainer width="100%" height={250}>

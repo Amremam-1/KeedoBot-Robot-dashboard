@@ -29,7 +29,7 @@ const DashboardLayout = () => {
       >
         <NavBar onClick={handleClick} />
 
-        <main className="flex-1 p-6 w-full bg-card">
+        <main className="flex-1 p-2 md:p-6 w-full bg-card">
           <Outlet />
         </main>
       </div>

@@ -10,7 +10,7 @@ const SearchBtn = () => {
       placeholder="Search users..."
       value={searchTerm}
       onChange={(e) => dispatch(setSearchTerm(e.target.value))}
-      className="border border-borderColor p-2 rounded-md focus:outline-none w-[50%]"
+      className="border border-borderColor p-2 rounded-md focus:outline-none w-[100%] md:w-[50%]"
     />
   )
 }

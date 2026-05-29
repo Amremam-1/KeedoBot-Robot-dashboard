@@ -1,36 +1,30 @@
-import { ChevronDown, User } from "lucide-react"
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import { ChevronDown, User } from "lucide-react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-import {
-  getItem,
-  deleteToken,
-  removeItem,
-} from "../utils/storage"
-import { PanelRightOpen } from "lucide-react"
+import { getItem, deleteToken, removeItem } from "../utils/storage";
+import { PanelRightOpen } from "lucide-react";
 
 const NavBar = ({ onClick }) => {
-  const [openMenu, setOpenMenu] =
-    useState(false)
+  const [openMenu, setOpenMenu] = useState(false);
 
-  const user = getItem("user")
+  const user = getItem("user");
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleLogout = () => {
-    deleteToken()
+    deleteToken();
 
-    removeItem("user")
+    removeItem("user");
 
-    navigate("/login")
-  }
+    navigate("/login");
+  };
 
   return (
-    <div className="h-16 flex items-center justify-between px-6 border-b border-borderColor bg-card text-textPrimary relative">
+    <div className="h-16 flex items-center justify-between px-2.5 md:px-6 border-b border-borderColor bg-card text-textPrimary relative">
       {/* left */}
 
       <div className="flex items-center">
-     
         <PanelRightOpen
           size={23}
           strokeWidth={2}
@@ -38,9 +32,7 @@ const NavBar = ({ onClick }) => {
           onClick={onClick}
         />
 
-        <h1 className="ms-3 font-semibold text-xl">
-          Dashboard
-        </h1>
+        <h1 className="ms-1.5 md:ms-3 font-semibold text-xl">Dashboard</h1>
       </div>
 
       {/* right */}
@@ -48,37 +40,26 @@ const NavBar = ({ onClick }) => {
       <div className="flex items-center relative">
         {/* Avatar */}
 
-        <div className="w-10 h-10 rounded-full bg-gradient-to-r from-primary to-orange-400 flex items-center justify-center shadow-md">
-          <User
-            size={22}
-            className="text-white"
-          />
+        <div className="md:w-10 md:h-10 w-6 h-6 rounded-full bg-gradient-to-r from-primary to-orange-400 flex items-center justify-center shadow-md">
+          <User size={22} className="text-white" />
         </div>
 
         {/* User Info */}
 
         <div
-          onClick={() =>
-            setOpenMenu(!openMenu)
-          }
+          onClick={() => setOpenMenu(!openMenu)}
           className="flex items-center ms-3 gap-1 cursor-pointer select-none"
         >
           <div className="flex flex-col leading-tight">
             <h3 className="text-sm font-semibold text-textPrimary">
               {user?.name || "Admin"}
             </h3>
-
-            <p className="text-xs text-textSecondary">
-              {user?.email || "admin@gmail.com"}
-            </p>
           </div>
 
           <ChevronDown
             size={18}
             className={`text-textSecondary transition-transform duration-300 ${
-              openMenu
-                ? "rotate-180"
-                : ""
+              openMenu ? "rotate-180" : ""
             }`}
           />
         </div>
@@ -94,27 +75,21 @@ const NavBar = ({ onClick }) => {
                 {user?.name || "Admin"}
               </h4>
 
-              <p className="text-xs text-textSecondary mt-1">
-                {user?.email}
-              </p>
+              <p className="text-xs text-textSecondary mt-1">{user?.email}</p>
             </div>
 
             {/* Menu Items */}
 
             <div className="py-2">
               <button
-                onClick={() =>
-                  navigate("/profile")
-                }
+                onClick={() => navigate("/profile")}
                 className="w-full text-left px-3 py-2 text-sm rounded-lg hover:bg-hover transition"
               >
                 Profile
               </button>
 
               <button
-                onClick={() =>
-                  navigate("/settings")
-                }
+                onClick={() => navigate("/settings")}
                 className="w-full text-left px-3 py-2 text-sm rounded-lg hover:bg-hover transition"
               >
                 Settings
@@ -131,7 +106,7 @@ const NavBar = ({ onClick }) => {
         )}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
